@@ -1,11 +1,23 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+void print(int arr[], int size);
+void sort(int arr[], int size);
+
 int main() {
     const int N = 10;
-    int arr[N];
+    int arr[] = {1, 2, 45, 4, 5, 23, 2, 3, 2, -2};
+
+    sort(arr, 10);
+    print(arr, 10);
 
     return 0;
+}
+
+void print(int arr[], int size){
+    for(int i = 0; i < size; i++){
+        printf("%d\t", arr[i]);
+    }
 }
 
 void sort(int arr[], int size) {
