@@ -8,7 +8,7 @@ int main() {
     return 0;
 }
 
-int* pigeonholeSort(int arr[], int size) {
+void sort(int arr[], int size) {
     int i, j = 0;
     int min = arr[0];
     int max = arr[0];
@@ -28,11 +28,9 @@ int* pigeonholeSort(int arr[], int size) {
 
     for (i = 0; i < range; i ++) {
         while (temp[i] > 0) {
-            arra_nums[j] = i + min_val;
-            temp[i]--;
-            j++;
+            arr[j] = i +min;
+            temp[i] --;
+            j ++;
         }
     }
-
-    return arra_nums;
 }
